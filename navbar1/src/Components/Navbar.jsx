@@ -8,13 +8,13 @@ const Navbar = () => {
          <Link to='/' className='text-3xl font-bold m-16'>Website</Link>
          <ul className='flex'>
           <li ><NavLink to='/about' className={({ isActive }) =>
-              `block text-xl p-8 mx-0 my-8 rounded-lg ${isActive ? 'bg-blue-500' : 'text-white'}`
+              `block text-xl p-8 mx-0 my-8 rounded-lg ${isActive ? 'bg-blue-500' : 'text-white  hover:bg-blue-900'}`
             }>About</NavLink></li>
           <li ><NavLink to='/services' className={({ isActive }) =>
-              `block text-xl p-8 mx-0 my-8 rounded-lg ${isActive ? 'bg-blue-500' : 'text-white'}`
+              `block text-xl p-8 mx-0 my-8 rounded-lg ${isActive ? 'bg-blue-500' : 'text-white  hover:bg-blue-900'}`
             }>Services</NavLink></li>
           <li ><NavLink to='/contact' className={({ isActive }) =>
-              `block text-xl p-8 mx-0 my-8 rounded-lg ${isActive ? 'bg-blue-500' : 'text-white'}`
+              `block text-xl p-8 mx-0 my-8 rounded-lg ${isActive ? 'bg-blue-500' : 'text-white  hover:bg-blue-900'}`
             }>Contact</NavLink></li>
          </ul>
     </nav>
@@ -40,4 +40,8 @@ In Normal CSS:
     margin: 0 0.5rem;
     border-radius: 0.5rem;
 }
+
+    nav ul li a:not(.active):hover{
+      background-color: #172554
+    }
 */
