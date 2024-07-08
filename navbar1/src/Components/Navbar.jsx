@@ -4,8 +4,13 @@ import {Link,NavLink} from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav className='flex justify-between items-center bg-blue-950 text-white'> 
+    <nav className='flex justify-between items-center bg-blue-950 text-white sticky top-0'> 
          <Link to='/' className='text-3xl font-bold m-16'>Website</Link>
+         <div className='flex absolute top-12 right-8 flex-col justify-between w-36 h-32'> 
+          <span className='h-6 w-full bg-white bg-radius rounded-custom'></span>
+          <span className='h-6 w-full bg-white bg-radius rounded-custom'></span>
+          <span className='h-6 w-full bg-white bg-radius rounded-custom'></span>
+         </div>
          <ul className='flex'>
           <li ><NavLink to='/about' className={({ isActive }) =>
               `block text-xl p-8 mx-0 my-8 rounded-lg ${isActive ? 'bg-blue-500' : 'text-white  hover:bg-blue-900'}`
